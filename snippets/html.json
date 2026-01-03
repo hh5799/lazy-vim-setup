@@ -1,0 +1,29 @@
+{
+  "HTML Core Template": {
+    "prefix": "htmlcore",
+    "body": [
+      "<!doctype html>",
+      "<html>",
+      "<head>",
+      "    <meta charset=\"UTF-8\">",
+      "    <style>",
+      "        body {",
+      "            font-family: 'JetBrainsMono Nerd Font', monospace;",
+      "        }",
+      "        .center-container {",
+      "            text-align: center;",
+      "            width: 100%;",
+      "        }",
+      "    </style>",
+      "    <title>${1:Document}</title>",
+      "</head>",
+      "<body>",
+      "    <div class=\"center-container\">",
+      "        $0",
+      "    </div>",
+      "</body>",
+      "</html>"
+    ],
+    "description": "Standard HTML5 boilerplate with centered container"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "C Core Template": {
+    "prefix": "ccore",
+    "body": [
+      "#include <stdio.h>",
+      "#include <string.h>",
+      "#include <math.h>",
+      "",
+      "int main(void) {",
+      "    ${1:// your code here}",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Standard C boilerplate with common headers"
+  },
+  "Printf Debug": {
+    "prefix": "pr",
+    "body": ["printf(\"${1:%s}\\n\", ${2:var});"],
+    "description": "Quick printf with newline"
+  },
+  "For Loop": {
+    "prefix": "fori",
+    "body": [
+      "for (int ${1:i} = 0; ${1:i} < ${2:count}; ${1:i}++) {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Standard for loop"
+  }
+}

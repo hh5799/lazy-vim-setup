@@ -1,0 +1,32 @@
+{
+  "C++ Competitive Programming Core": {
+    "prefix": "cppcore",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "#define int long long",
+      "#define ll long long",
+      "#define REP(i, a, b, s) for(int i = (a); i <= (b); i += (s))",
+      "",
+      "using namespace std;",
+      "",
+      "const int N = 1e6 + 6;",
+      "",
+      "int n, a[N], cnt[N];",
+      "",
+      "signed main() {",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
+      "",
+      "    $0",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Standard CP template with fast I/O and common defines"
+  },
+  "Standard For Loop": {
+    "prefix": "fori",
+    "body": ["for (int i = 1; i <= n; i++) {", "    $0", "}"],
+    "description": "For loop from 1 to n"
+  }
+}
