@@ -1,0 +1,12 @@
+{
+  "Header Comment": {
+    "prefix": "header",
+    "body": [
+      "# Title: ${1:Project Name}",
+      "# Author: ${2:Your Name}",
+      "# Date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "$0"
+    ],
+    "description": "Inserts a file header"
+  }
+}
