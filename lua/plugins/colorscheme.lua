@@ -143,19 +143,116 @@
 --},
 --}
 
+--return {
+---- Add the monochrome theme
+--{
+--"repl6669/repl69",
+--name = "repl69",
+--lazy = false,
+--priority = 1000,
+--},
+---- Configure LazyVim to use it
+--{
+--"LazyVim/LazyVim",
+--opts = {
+--colorscheme = "repl69",
+--},
+--},
+--}
+
+--return {
+---- Add rose-pine plugin
+--{
+--"rose-pine/neovim",
+--name = "rose-pine",
+--lazy = false,
+--priority = 1000,
+--opts = {
+--variant = "dawn", -- set light mode variant as default
+--bold_vert_split = false,
+--dim_nc_background = false,
+--disable_background = false,
+--disable_float_background = false,
+--disable_italics = false,
+--},
+--},
+--
+---- Configure LazyVim to load rose-pine as default
+--{
+--"LazyVim/LazyVim",
+--opts = {
+--colorscheme = "rose-pine-dawn", -- explicitly load the dawn (light) theme
+--},
+--},
+--}
+--
+--return {
+---- 1. Install the VS Code colorscheme plugin
+--{
+--"Mokiya/vscode.nvim",
+--lazy = false,
+--priority = 1000, -- Ensure it loads before other plugins
+--config = function()
+--local vscode = require("vscode")
+--
+--vscode.setup({
+---- Options: 'dark' (Modern Dark), 'light', or 'vscDarkPlus' (Classic Dark+)
+--style = "dark",
+--
+---- Enable transparent background (optional)
+--transparent = false,
+--
+---- Enable italic comment
+--italic_comments = true,
+--
+---- Disable nvim-tree background color
+--disable_nvimtree_bg = false,
+--})
+--
+---- Apply colorscheme
+--vscode.load()
+--end,
+--},
+--
+---- 2. Set as default LazyVim colorscheme
+--{
+--"LazyVim/LazyVim",
+--opts = {
+--colorscheme = "vscode",
+--},
+--},
+--}
+
+--return {
+--{
+--"maxmx03/solarized.nvim",
+--lazy = false,
+--priority = 1000,
+--config = function()
+--vim.o.background = "light"
+--
+--require("solarized").setup({
+--palette = "solarized", -- or 'solarized-osaka' if using solarized-osaka plugin
+--})
+--
+--vim.cmd.colorscheme("solarized")
+--end,
+--},
+--}
+
 return {
-  -- Add the monochrome theme
   {
-    "repl6669/repl69",
-    name = "repl69",
-    lazy = false,
+    "ellisonleao/gruvbox.nvim",
     priority = 1000,
-  },
-  -- Configure LazyVim to use it
-  {
-    "LazyVim/LazyVim",
+    lazy = false,
     opts = {
-      colorscheme = "repl69",
+      contrast = "hard", -- Options: "hard", "soft", or "" (default)
+      transparent_mode = false,
     },
+    config = function(_, opts)
+      vim.o.background = "light"
+      require("gruvbox").setup(opts)
+      vim.cmd.colorscheme("gruvbox")
+    end,
   },
 }

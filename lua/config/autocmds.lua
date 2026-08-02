@@ -23,28 +23,28 @@
 --end,
 --})
 
--- Force transparent background across all colorschemes
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",
-  callback = function()
-    -- Define all the highlight groups you want to strip backgrounds from
-    local groups = {
-      "Normal",
-      "NormalNC",
-      "NormalFloat",
-      "SignColumn",
-      "StatusLine",
-      "StatusLineNC",
-      "LineNr",
-      "CursorLineNr",
-      "Folded",
-      "FoldColumn",
-      "Pmenu",
-      "PmenuSel",
-    }
-
-    for _, group in ipairs(groups) do
-      vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-    end
-  end,
-})
+---- Force transparent background across all colorschemes
+--vim.api.nvim_create_autocmd("ColorScheme", {
+--pattern = "*",
+--callback = function()
+---- Define all the highlight groups you want to strip backgrounds from
+--local groups = {
+--"Normal",
+--"NormalNC",
+--"NormalFloat",
+--"SignColumn",
+--"StatusLine",
+--"StatusLineNC",
+--"LineNr",
+--"CursorLineNr",
+--"Folded",
+--"FoldColumn",
+--"Pmenu",
+--"PmenuSel",
+--}
+--
+--for _, group in ipairs(groups) do
+--vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+--end
+--end,
+--})

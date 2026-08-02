@@ -6,3 +6,4 @@
 
 -- Thêm dòng này vào file lua/config/keymaps.lua của bạn
 vim.keymap.set("n", "<C-g>", "gg=G<C-o>", { desc = "Format toàn bộ văn bản" })
+vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select all text" })

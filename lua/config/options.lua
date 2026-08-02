@@ -6,7 +6,6 @@ vim.g.autoformat = true
 vim.opt.number = true
 vim.opt.relativenumber = false
 vim.opt.cursorline = false
---vim.opt.background = "dark"
 vim.opt.termguicolors = true
 -- Sử dụng bảng màu mặc định của Neovim
 vim.g.lazyvim_colorscheme = "default"
